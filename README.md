@@ -1,4 +1,4 @@
-# Harshit Agent Skills
+# Agent Skills
 
 Reusable AI agent skills for building better agents, prompts, workflows, and coding-agent behavior.
 
