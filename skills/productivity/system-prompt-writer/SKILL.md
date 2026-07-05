@@ -30,6 +30,8 @@ If the user asks you to create the final prompt now but critical details are mis
 
 Interview the user before drafting. Ask questions in focused batches, not a giant form, unless the user explicitly asks for the full questionnaire.
 
+Ask the questions one at a time, waiting for feedback on each question before continuing. Asking multiple questions at once is bewildering.
+
 First collect the non-negotiables:
 
 1. Agent purpose: what the agent is supposed to accomplish.
