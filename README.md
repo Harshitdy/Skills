@@ -1,8 +1,8 @@
-# Agent Skills
+# Harshit Agent Skills
 
 Reusable AI agent skills for building better agents, prompts, workflows, and coding-agent behavior.
 
-## Available Skills
+## Skills
 
 ### system-prompt-writer
 
@@ -12,7 +12,6 @@ It helps define:
 
 - agent purpose
 - users
-- operating context
 - tools and capabilities
 - autonomy boundaries
 - guardrails
@@ -23,40 +22,16 @@ It helps define:
 
 ## Install
 
-List available skills:
-
-```bash
-npx skills@latest add Harshitdy/Skills --list
-```
-
-Install interactively:
-
-```bash
-npx skills@latest add Harshitdy/Skills
-```
-
-Install only `system-prompt-writer`:
+Install the skill:
 
 ```bash
 npx skills@latest add Harshitdy/Skills --skill system-prompt-writer
 ```
 
-Install globally for Codex:
+List installed skills:
 
 ```bash
-npx skills@latest add Harshitdy/Skills --skill system-prompt-writer -g -a codex -y
-```
-
-Install globally for Claude Code:
-
-```bash
-npx skills@latest add Harshitdy/Skills --skill system-prompt-writer -g -a claude-code -y
-```
-
-Install globally for Cursor:
-
-```bash
-npx skills@latest add Harshitdy/Skills --skill system-prompt-writer -g -a cursor -y
+npx skills@latest list
 ```
 
 Use without installing:
@@ -67,16 +42,24 @@ npx skills@latest use Harshitdy/Skills --skill system-prompt-writer
 
 ## How to Use
 
-After installing, ask your coding agent:
+This skill has model invocation disabled, so you need to invoke it explicitly.
+
+If your agent supports slash skill commands, use:
+
+```text
+/system-prompt-writer
+```
+
+Then say:
+
+```text
+Interview me first, then create the best possible system prompt for my agent.
+```
+
+If your agent does not support slash commands, type:
 
 ```text
 Use the system-prompt-writer skill. Interview me first, then create the best possible system prompt for my agent.
-```
-
-For a coding-agent-specific prompt:
-
-```text
-Use the system-prompt-writer skill to interview me and create a system prompt for a coding agent that works on my codebase safely.
 ```
 
 ## Repo Structure
@@ -91,10 +74,12 @@ skills/
         └── CRITIQUE_RUBRIC.md
 ```
 
-## Direct Skill Path
-
-The main skill file is here:
+## Skill Path
 
 ```text
 skills/productivity/system-prompt-writer/SKILL.md
 ```
+
+## License
+
+MIT
