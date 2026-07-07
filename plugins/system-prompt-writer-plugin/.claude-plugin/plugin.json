@@ -1,0 +1,5 @@
+{
+  "name": "system-prompt-writer-plugin",
+  "description": "Structured agent interview process for writing system prompts",
+  "version": "1.0.0"
+}

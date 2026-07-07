@@ -1,83 +1,66 @@
 # Agent Skills
 
-Reusable AI agent skills for building better agents, prompts, workflows, and coding-agent behavior.
+Reusable AI agent skills packaged as a Claude marketplace with two plugins.
 
-## Skills
+## Plugins
 
-### system-prompt-writer
+### think-like-fable5-plugin
 
-A framework-agnostic skill that interviews the user, gathers requirements, drafts a system prompt, critiques it, and produces a high-quality final system prompt for an AI agent.
+Verification-first reasoning for correctness-critical tasks.
 
-It helps define:
+Invocation:
 
-- agent purpose
-- users
-- tools and capabilities
-- autonomy boundaries
-- guardrails
-- privacy and security rules
-- output format
-- success criteria
-- test prompts
+```text
+/think-like-fable5-plugin:think-like-fable5
+```
+
+### system-prompt-writer-plugin
+
+Framework-agnostic system prompt interviewing, drafting, and critique workflow.
+
+Invocation:
+
+```text
+/system-prompt-writer-plugin:system-prompt-writer
+```
 
 ## Install
 
-Install the skill:
-
-```bash
-npx skills@latest add Harshitdy/Skills --skill system-prompt-writer
-```
-
-List installed skills:
-
-```bash
-npx skills@latest list
-```
-
-Use without installing:
-
-```bash
-npx skills@latest use Harshitdy/Skills --skill system-prompt-writer
-```
-
-## How to Use
-
-This skill has model invocation disabled, so you need to invoke it explicitly.
-
-If your agent supports slash skill commands, use:
+Add the marketplace:
 
 ```text
-/system-prompt-writer
+/plugin marketplace add Harshitdy/think-like-fable5
 ```
 
-Then say:
+Install either plugin:
 
 ```text
-Interview me first, then create the best possible system prompt for my agent.
-```
-
-If your agent does not support slash commands, type:
-
-```text
-Use the system-prompt-writer skill. Interview me first, then create the best possible system prompt for my agent.
+/plugin install think-like-fable5-plugin@think-like-fable5
+/plugin install system-prompt-writer-plugin@think-like-fable5
 ```
 
 ## Repo Structure
 
 ```text
-skills/
-└── productivity/
-    └── system-prompt-writer/
-        ├── SKILL.md
-        ├── INTERVIEW_BANK.md
-        ├── PROMPT_ARCHITECTURE.md
-        └── CRITIQUE_RUBRIC.md
-```
-
-## Skill Path
-
-```text
-skills/productivity/system-prompt-writer/SKILL.md
+.
+├── .claude-plugin/
+│   └── marketplace.json
+└── plugins/
+    ├── think-like-fable5-plugin/
+    │   ├── .claude-plugin/
+    │   │   └── plugin.json
+    │   └── skills/
+    │       └── think-like-fable5/
+    │           └── SKILL.md
+    └── system-prompt-writer-plugin/
+        ├── .claude-plugin/
+        │   └── plugin.json
+        └── skills/
+            └── system-prompt-writer/
+                ├── CRITIQUE_RUBRIC.md
+                ├── INTERVIEW_BANK.md
+                ├── PROMPT_ARCHITECTURE.md
+                └── SKILL.md
 ```
 
 ## License

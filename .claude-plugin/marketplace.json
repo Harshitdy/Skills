@@ -1,0 +1,21 @@
+{
+  "name": "think-like-fable5",
+  "owner": {
+    "name": "Harshit"
+  },
+  "description": "Personal skill collection: verification-first reasoning and system prompt engineering",
+  "plugins": [
+    {
+      "name": "think-like-fable5-plugin",
+      "source": "./plugins/think-like-fable5-plugin",
+      "description": "Verification-first reasoning method for correctness-critical tasks — re-derive every number/quote/claim, label guesses inline, red-team the conclusion, answer-first",
+      "version": "1.0.0"
+    },
+    {
+      "name": "system-prompt-writer-plugin",
+      "source": "./plugins/system-prompt-writer-plugin",
+      "description": "Structured agent interview process for writing system prompts",
+      "version": "1.0.0"
+    }
+  ]
+}
